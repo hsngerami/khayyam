@@ -137,21 +137,21 @@ AM_PM_ASCII = {
 
 
 FORMAT_DIRECTIVE_REGEX = '%[a-zA-Z%]'
-YEAR_REGEX = '\d{1,4}'
-SHORT_YEAR_REGEX = '\d{2}'
+YEAR_REGEX = r'\d{1,4}'
+SHORT_YEAR_REGEX = r'\d{2}'
 MONTH_REGEX = '([0]?[1-9]|1[0-2])'
-DAY_REGEX = '([0]?[1-9]|[12]\d|3[01])' # 1-31
-DAY_OF_YEAR_REGEX = '([0]{0,2}[1-9]|[0]?[1-9]\d|[12]\d{2}|3[0-5]\d|36[0-6])' # 1-366
-WEEK_OF_YEAR_REGEX = '([0]?\d|[1-4]\d|5[0-3])'  # 0-53
+DAY_REGEX = r'([0]?[1-9]|[12]\d|3[01])' # 1-31
+DAY_OF_YEAR_REGEX = r'([0]{0,2}[1-9]|[0]?[1-9]\d|[12]\d{2}|3[0-5]\d|36[0-6])' # 1-366
+WEEK_OF_YEAR_REGEX = r'([0]?\d|[1-4]\d|5[0-3])'  # 0-53
 WEEKDAY_REGEX = '[0-6]'
 AM_PM_REGEX = '(%s)' % '|'.join(AM_PM.values())
 AM_PM_ASCII_REGEX = '([aA][mM]|[pP][mM])'
 HOUR12_REGEX = '(0[1-9]|1[0-2])'
-HOUR24_REGEX = '([01]\d|2[0-3])'
-MINUTE_REGEX = '([0]?\d|[1-5]\d)'
-SECOND_REGEX = '([0]?\d|[1-5]\d)'
-MICROSECOND_REGEX = '\d{1,6}'
-UTC_OFFSET_FORMAT_REGEX = '([-+]?\d{2}:\d{2}|)'
+HOUR24_REGEX = r'([01]\d|2[0-3])'
+MINUTE_REGEX = r'([0]?\d|[1-5]\d)'
+SECOND_REGEX = r'([0]?\d|[1-5]\d)'
+MICROSECOND_REGEX = r'\d{1,6}'
+UTC_OFFSET_FORMAT_REGEX = r'([-+]?\d{2}:\d{2}|)'
 TZ_NAME_FORMAT_REGEX='.+'
 
 PERSIAN_YEAR_REGEX = '[۰۱۲۳۴۵۶۷۸۹]{1,4}'

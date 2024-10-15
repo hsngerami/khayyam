@@ -27,7 +27,7 @@ class UTCOffsetDirective(Directive):
         exp = ctx[self.name]
         if exp.strip() == '':
             return
-        regex = '(?P<posneg>[-+]?)(?P<hour>\d{2}):(?P<minute>\d{2})'
+        regex = r'(?P<posneg>[-+]?)(?P<hour>\d{2}):(?P<minute>\d{2})'
         match = re.match(regex, exp)
         d = match.groupdict()
         posneg = lambda i: 0 - i if d['posneg'] == '-' else i
